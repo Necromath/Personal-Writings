@@ -16,10 +16,6 @@
 
 ***I'm so sorry.***
 
-**BEEP**
+***Here's where we keep our writings.***
 
-**BEEP**
-
-**BEEP**
-
-
+***Math related, or otherwise***
