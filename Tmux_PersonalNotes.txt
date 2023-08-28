@@ -1,0 +1,29 @@
+Hey Mauricio.
+
+We're using Tmux now. It's terminal window splitter. It
+helps us to write some more code.
+This is because with the window splits. We can have multiple
+things happening on the terminal at once. I.e. we can have
+things that we're writing in vim and we can have the
+terminal to execute some other moves. Here are the moves in
+tmux that are essential to know.
+
+- `ctrl+b` then `"` to split the window horizontally
+
+- `ctrl+b` then `%` to split the window vertically
+
+- `ctrl+b` then `arrow key` to move between windows
+
+- `ctrl+b` then `x` to close a window
+
+- `ctrl+b` then `c` to create a new window
+
+- `ctrl+b` then `0` to move to window 0
+
+- `ctrl+b` then `1` to move to window 1
+
+- `ctrl+b` then `2` to move to window 2
+
+- `ctrl+b` then `3` to move to window 3
+
+
