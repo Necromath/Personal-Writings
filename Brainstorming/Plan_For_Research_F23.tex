@@ -2,6 +2,8 @@
 \usepackage{amsmath}
 
 \begin{document}
+
+
 \setlength{\parindent}{6pt}
 
 
@@ -61,14 +63,17 @@ Improved accuracy in the location of the oil reservoirs. TODO
 
 \section{Work roadmap}
 
-Need to set up a pipeline for this. There is an implementation that I want to do. At MSRI summer
-camp, I encountered a paper with some image analysis that could read what a neuron was thinking in
-the last layer of a NN. I want to do something similar with the seismic reflection data. I want to
-be able to read what the seismic reflection data is thinking. Ideally, I would like to be able to
-have this model be thinking in topological terms. So, I need this model to be robust to noisy data.
-Be trained to resist the pulldown that the seismic data comes with. There are already models that
-clean the data and adjust for the pulldown/up of the seismic data. My main concern is jury rigging
-too many models together. \\ I want to implement CliP Dissect and see if I can get it to work on a
+Need to set up a pipeline for this. There is an implementation that I want to do. At the MSRI TDA
+camp, I encountered a paper (CliP Dissect) that performed image analysis that could read what a
+neuron was thinking in the last layer of a NN. 
+I want to do something similar with the seismic reflection data.
+Ideally, I would like to be able to have this model be thinking in topological terms. 
+So, I need this model to be robust to noisy data. There are already exisiting models that can clean
+the seismic data as well as identify some of the DHI. The idea is that I want to use CliP Dissect to
+see what these models are thinking about. 
+There are already models that clean the data and adjust for the pulldown/up of the seismic data. My
+main concern is jury rigging too many models together.
+\\ I want to implement CliP Dissect and see if I can get it to work on a
 seismic reflection image recognition dataset. This way, I can see if I can get the seismic image model
 to think in topological terms. Next, I think that I should try to devise a loss function, or some
 other topologically dependent function into a machine learning model that will use the homology
@@ -76,14 +81,16 @@ found in the image to find the location of the oil reservoirs.
 
 
 \bibliographystyle{plain}
+
+
 \bibliography{Plan_For_Research_F23}
 
-%wiki.aapg.org/Amplitude_(seismic)
 
-%wiki.aapg.org/Direct_hydrocarbon_indicator
+$wiki.aapg.org/Amplitude_(seismic)$
 
-%Clip-Dissect: https://arxiv.org/abs/2204.10965
+$wiki.aapg.org/Direct_hydrocarbon_indicator$
 
+$Clip-Dissect: https://arxiv.org/abs/2204.10965$
 
 
 \end{document}
