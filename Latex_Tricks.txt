@@ -1,0 +1,10 @@
+Hi Mauricio, here are some tricks for writing in the tex documents that we have 
+
+cwd is a command that means change word denominators which will allow you to change parentheses or
+brackets 
+
+twd is toggle word environment which turns delimeteres on and off
+
+cse is change surrounding environment which allows you to change the environment of the word you are
+
+
