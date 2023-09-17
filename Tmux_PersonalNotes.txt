@@ -26,4 +26,18 @@ tmux that are essential to know.
 
 - `ctrl+b` then `3` to move to window 3
 
+Hi again Mauricio. We are also now using Tabularize. A pretty powerful text aligner
+that helps us to align our code. Here are the moves that we use in Tabularize.
+
+- `:Tabularize /` to align by `/` Select the text in visual mode, then type `:Tabularize /` and the symbol we wish to align 
+after is written after the '/'
+
+- `:Tabularize /r0c0l0` to align by `/` and right align the first column
+
+- `:Tabularize /l1c1l0` to align by `/` and left align the second column
+
+- `:Tabularize /l1c1l0` to align by `/` and left align the second column
+
+- `:Tabularize /l1c1l0` to align by `/` and left align the second column
+
 
