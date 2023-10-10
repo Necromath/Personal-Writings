@@ -43,6 +43,7 @@ improve these methods by using tools from topology.
 
 \end{frame}
 % }}}
+
 % Intuition
 \begin{frame}% {{{
 
@@ -71,6 +72,7 @@ $\mathbb{R}^n$. Most objects in the real world are manifolds.
 
 \end{frame}
 % }}}
+
 % TDA Pipeline
 \begin{frame}% {{{
 \frametitle{The TDA Pipeline}
@@ -100,6 +102,49 @@ $\mathbb{R}^n$. Most objects in the real world are manifolds.
 \end{itemize}
 
 \end{frame}% }}}
+
+% Simplical Complexes
+\begin{frame}% {{{
+
+\frametitle{Simplicial Complexes}
+
+\begin{itemize}
+
+\item The problem with data is that it is discrete, but manifolds are continuous.
+
+\pause
+
+\item We can remedy this by building a simplicial complex from our data to approximate the manifold.
+
+\pause
+
+\item A $k$-simplex is the convex hull of $k+1$ linearly independent points in $\mathbb{R}^n$.
+%Show a picture of a 0,1,2,3 simplex
+\pause
+
+\item A simplicial complex $K$ is a collection of simplices that satisfies two conditions:
+\end{itemize}
+
+\begin{enumerate}
+
+\item If $\sigma \in K$, then every face of $\sigma$ is also in $K$.
+
+\item If $\sigma_1, \sigma_2 \in K$, then $\sigma_1 \cap \sigma_2$ is either empty or a face of both
+  $\sigma_1$ and $\sigma_2$.
+\end{enumerate}
+
+%Show a picture of a simplicial complex
+
+\end{frame}
+
+
+% }}}
+
+% A BRIEF overview of Homology and maybe persistent homology
+
+% Vietoris Rips Complex, Alpha Complex, Cech Complex
+
+
 % Topology, need to cut down
 %Topological Preliminaries{{{
 
@@ -211,38 +256,7 @@ These are a basis for the Euclidean topology.
 
 % }}}
 
-\begin{frame}
-
-\frametitle{Simplicial Complexes}
-
-\begin{itemize}
-
-\item The problem with data is that it is discrete, but manifolds are continuous.
-
-\pause
-
-\item We can remedy this by building a simplicial complex from our data to approximate the manifold.
-
-\pause
-
-\item A $k$-simplex is the convex hull of $k+1$ linearly independent points in $\mathbb{R}^n$.
-%Show a picture of a simplex
-\pause
-
-\item A simplicial complex $K$ is a collection of simplices that satisfies two conditions:
-
-\begin{enumerate}
-
-\item If $\sigma \in K$, then every face of $\sigma$ is also in $K$.
-
-\item If $\sigma_1, \sigma_2 \in K$, then $\sigma_1 \cap \sigma_2$ is either empty or a face of both
-  $\sigma_1$ and $\sigma_2$.
-
-\end{enumerate}
 
 
-
-\end{itemize}
-\end{frame}
 
 \end{document}
