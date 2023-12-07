@@ -1,0 +1,108 @@
+%% LANL Document here
+
+\documentclass{beamer}
+
+\begin{document}
+
+\begin{frame}
+  \frametitle{Topological Data Analysis (TDA) Pipeline}
+
+  \begin{itemize}
+    \setlength\itemsep{1em}
+    \item \textbf{Data Representation:} Represent the dataset as a point cloud in a high-dimensional space with a distance metric.
+    \item \textbf{Simplicial Complex Construction:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em}
+        \item Connect points to form simplices.
+        \item Aggregate simplices into a complex.
+      \end{itemize}
+    \item \textbf{Filtration:} Introduce a filtration parameter "t" and vary it.
+    \item \textbf{Persistence:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em}
+        \item Track topological changes during filtration.
+        \item Capture birth and death of topological features.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Topological Data Analysis (TDA) Pipeline (cont.)}
+
+  \begin{itemize}
+    \setlength\itemsep{1em}
+    \item \textbf{Topological Summarization:} Summarize features using barcodes or persistence diagrams.
+    \item \textbf{Interpretation and Visualization:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em}
+        \item Interpret results in the context of the original data.
+        \item Visualize persistent homology using landscapes, heatmaps, etc.
+      \end{itemize}
+    \item \textbf{Validation and Application:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em}
+        \item Validate results against domain knowledge.
+        \item Apply findings for insights into dataset structure.
+      \end{itemize}
+    \item \textbf{Integration:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em}
+        \item Simplicial complex is a crucial part of the analysis.
+        \item Iteratively refine complex and persistent homology for multi-scale exploration.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{TDA for Wave Data Pipeline}
+
+  \begin{itemize}
+    \setlength\itemsep{1em} % Adjust the separation between items
+    \item \textbf{Data Representation:} Represent wave data as point clouds in a high-dimensional space.
+    \item \textbf{Simplicial Complex Construction:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em} % Adjust the separation between sub-items
+        \item Connect points using subsampling methods.
+        \item Aggregate simplices into a simplicial complex.
+      \end{itemize}
+    \item \textbf{Lower Star Filtration:} Apply a lower star filtration method.
+    \item \textbf{Persistence:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em} % Adjust the separation between sub-items
+        \item Track changes during the filtration.
+        \item Capture birth and death of topological features using persistent homology.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{TDA for Wave Data Pipeline (cont.)}
+
+  \begin{itemize}
+    \setlength\itemsep{1em} % Adjust the separation between items
+    \item \textbf{Topological Summarization:} Summarize persistent features using persistence landscapes.
+    \item \textbf{Interpretation and Visualization:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em} % Adjust the separation between sub-items
+        \item Interpret results in the context of wave data.
+        \item Visualize persistent homology using barcodes, persistence diagrams, etc.
+      \end{itemize}
+    \item \textbf{Validation and Application:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em} % Adjust the separation between sub-items
+        \item "Persistent" topological features should correspond to wave features of high amplitude.
+        \item The physical reality (obstructions) of the data should be reflected in the topological features of our data.
+      \end{itemize}
+    \item \textbf{Integration:}
+      \begin{itemize}
+        \setlength\itemsep{0.5em} % Adjust the separation between sub-items
+        \item Subsampling used for simplicial complex construction.
+        \item Incorporate in ML pipeline for obstruction / feature detection in noisy data.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+
+\end{document}
+
