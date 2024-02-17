@@ -1,6 +1,6 @@
-%% LANL Document here
 
 \documentclass{beamer}
+\setbeamertemplate{itemize items}[circle]
 
 \begin{document}
 
@@ -47,10 +47,55 @@
     \item \textbf{Integration:}
       \begin{itemize}
         \setlength\itemsep{0.5em}
-        \item Simplicial complex is a crucial part of the analysis.
-        \item Iteratively refine complex and persistent homology for multi-scale exploration.
+        \item Cluster data based on topological features.
+        \item Incorporate topological loss functions into machine learning. 
       \end{itemize}
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{columns}[t]
+\column{.5\textwidth}
+\centering
+\includegraphics[width=5cm,height=3.5cm]{~/Personal-Writings/VR_Complex_T0.png}\\
+\includegraphics[width=5cm,height=3.5cm]{~/Personal-Writings/VR_Complex_T10.png}
+\column{.5\textwidth}
+\centering
+\includegraphics[width=5cm,height=3.5cm]{~/Personal-Writings/VR_Complex_T103.png}\\
+\includegraphics[width=5cm,height=3.5cm]{~/Personal-Writings/VR_Complex_T25.png}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[width=10cm,height=5cm]{~/Personal-Writings/WoodCellHom.png }
+    \caption{Homology of a wood cell wall. Filtered by pixel intensity.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[width=10cm,height=5cm]{~/Personal-Writings/WoodCellFilter.png}
+    \caption{Filtered wood cell wall.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[width=10cm,height=5cm]{~/Personal-Writings/BlackHoleHole.png}
+    \caption{An image of the black hole at the center of the galaxy M87.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[width=10cm,height=5cm]{~/Personal-Writings/BlackHoleFilter.png}
+    \caption{Proof that black holes do have holes}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
@@ -62,10 +107,10 @@
     \item \textbf{Simplicial Complex Construction:}
       \begin{itemize}
         \setlength\itemsep{0.5em} % Adjust the separation between sub-items
-        \item Connect points using subsampling methods.
-        \item Aggregate simplices into a simplicial complex.
+        \item Need to know first what the data represents.
+        \item Construct a simplicial filtration that captures the structure of the data.
       \end{itemize}
-    \item \textbf{Lower Star Filtration:} Apply a lower star filtration method.
+    \item \textbf{Lower Star Filtration:} Apply a lower star filtration method. Good for reconstruction of physical space.
     \item \textbf{Persistence:}
       \begin{itemize}
         \setlength\itemsep{0.5em} % Adjust the separation between sub-items
@@ -90,18 +135,27 @@
     \item \textbf{Validation and Application:}
       \begin{itemize}
         \setlength\itemsep{0.5em} % Adjust the separation between sub-items
-        \item "Persistent" topological features should correspond to wave features of high amplitude.
+        \item In some cases, "Persistent" topological features should correspond to wave features of high amplitude.
         \item The physical reality (obstructions) of the data should be reflected in the topological features of our data.
       \end{itemize}
     \item \textbf{Integration:}
       \begin{itemize}
         \setlength\itemsep{0.5em} % Adjust the separation between sub-items
-        \item Subsampling used for simplicial complex construction.
         \item Incorporate in ML pipeline for obstruction / feature detection in noisy data.
+        \item Object detection in sonar, radar, etc.
       \end{itemize}
   \end{itemize}
 \end{frame}
 
+\begin{frame}
+
+  %% I want a conclusion slide that summarizes the main points of the talk.
+  %% I want to end with a slide that shows the pipeline for TDA and how it can be applied to wave data.
+
+  \frametitle{Conclusion}
+
+Thank you for your time!
+  \end{frame}
 
 
 \end{document}
