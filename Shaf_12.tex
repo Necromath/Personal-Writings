@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+
+
+\title{Shafarevich Chapter 1 Section 2 Exercises}
+\author{Mauricio Montes}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Exercise 1}
+
+The set $ X \subset \mathbb{A}^2 $ is defined by the equation $ f : x^2 + y^2 = 1$ 
+and $ g: x = 1$. Find the ideal $\mathfrak{U}_X$. Is it true that $\mathfrak{U}_X = (f,g)$?
+
+
+\begin{proof}
+
+  We have that $X = V(f) \cap V(g)$. These sets intersect at exactly one point, namely $(1,0)$. As
+  seen by example 1.7 in the section, we have that 
+  $\mathbb{A}^2 = \mathbb{A}^2 [X] = \mathbb{A}^2 [x,y] / \mathfrak{U}_X$
+  this means that $\mathfrak{U}_X = (x,y)$. However, we can also see that $ y \notin (f,g)$, so it must
+  be that $\mathfrak{U}_X \neq (f,g)$.
+
+\end{proof}
+
+\section*{Exercise 2}
+
+Let $X \subset \mathbb{A}^2$ be the algebraic plane curve defined by $ y^2 =x^3$. Prove that an
+element of $k[X]$ can be written uniquely in the form $P(x) + Q(x)y$, where $P(x),Q(x) \in k[x]$.
+
+\begin{proof}
+
+  Suppose we have a generic element $f(x,y) \in k[X]$. We can write 
+  $f(x,y) = \sum_{i=0}^{N}a_{i}x^{N-i}y^{i}$. We can break this sum up into two sums, one for the even
+  and one for the odd powers of $i$. We can then write $f(x,y) = P(x) + Q(x)y$ where the even powers
+  of $i$ are in $P(x)$ and the odd powers of $i$ are in $Q(x)$. This is because of the fact that any
+  even power of $i$ will yield an even power of $y$ that can then be converted to an $x^3$ term. The
+  odd powers will then get converted to $x^3$ terms, except for one last $y$ term. i
+
+\end{proof}
+
+\section*{Exercise 3}
+
+Let $X$ be the curve of the previous exercise and $f(t) = (t^2,t^3)$. Prove that $f$ is not an
+isomorphism.
+
+\begin{proof}
+
+  We can see that $f$ is not an isomorphism because it is not bijective at its inverse. We can see
+  that if $g(x,y) = \frac{y}{x}$, then $g(f(t)) = \frac{t^3}{t^2} = t$. However, 
+  $f(g(x,y)) = f(\frac{y}{x}) = (\frac{y^2}{x^2},\frac{y^3}{x^3})$. Which is not defined whenever
+  $x=0$. Thus $f$ is not an isomorphism.
+
+\end{proof}
+
+
+
+\end{document}
+
