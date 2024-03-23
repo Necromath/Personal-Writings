@@ -67,16 +67,30 @@ the image $f(\mathbb{A}^2)$; is it open in $\mathbb{A}^2$? Is it dense? Is it cl
 
 \begin{proof}
 
-  The image of $f$ is $\mathbb{A}^2 \setminus \{(0,y) \mid y \in k\}$. This set is not open in
-  $\mathbb{A}^2$ - consider the preimage of a disk centered at the origin. This set is dense,
-  however. This is because the closure of the image is $\mathbb{A}^2$. This is because if we
+  The image of $f$ is $\mathbb{A}^2 \setminus \{(0,y) \mid y \in \mathbb{A}^2\}$. This set is dense.
+  This is because the closure of the image is $\mathbb{A}^2$. This is because if we
   consider the ideal of all polynomials vanishing on $f(\mathbb{A}^2)$, we get that these
   polynomials will be vanishing on a dense set (consider a small disk away from the origin), 
   and thus our ideal must be the zero ideal. Thus the closure of the image is $\mathbb{A}^2$. It is
-  not closed, however, since the closure of a closed set would be the set itself. 
+  not closed, however, since the closure of a closed set would be the set itself. It is not open
+  since the complement of the image is not complement of a closed set.
 
 \end{proof}
 
+
+\section*{Exercise 9}
+
+Prove that the map $f(x,y) = (\alpha x , \beta y + P(x))$ is an automorphism of $\mathbb{A}^2$,
+where $\alpha, \beta \in k$ are nonzero elements, and $P(x)$ is a polynomial. Prove that maps of
+this type form a group $B$.
+
+\begin{proof} 
+
+  This map has inverse given by $g(x,y) = \left( \frac{x}{\alpha} , \frac{y - P(x)}{\beta} \right)$
+  Composing both ways, we see we get an automorphism of $\mathbb{A}^2$. 
+  
+
+\end{proof}
 
 
 \end{document}
