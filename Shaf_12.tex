@@ -87,10 +87,48 @@ this type form a group $B$.
 \begin{proof} 
 
   This map has inverse given by $g(x,y) = \left( \frac{x}{\alpha} , \frac{y - P(x)}{\beta} \right)$
-  Composing both ways, we see we get an automorphism of $\mathbb{A}^2$. 
-  
+  Composing both ways, we see we get an automorphism of $\mathbb{A}^2$. To see how maps of this type
+  form a group. The associated operation would be composition. The identity element is the identity
+  map $id(x,y) = (x,y)$. The inverse of a map $f$ is the map $g$ given by the inverse of $f$. The
+  operation of function composition is associative. Thus we have a group.
 
 \end{proof}
+
+
+\section*{Exercise 11}
+
+Suppose that $X$ consists of two points. Prove that the coordinate ring $k[X]$ is isomorphic to the
+direct sum of two copies of $k$.
+
+\begin{proof}
+
+  We know that $k[X] = k[x,y] / \mathfrak{U}_X$. Since $X$ consists of two points, we have that
+  $\mathfrak{U}_X = (x-a)(x-b)$ for some $a,b \in k, a \neq b$. We can then write $k[X] = k[x,y] / (x-a)(x-b)$.
+  We can then write $k[X] = k[x,y] / (x-a)(x-b) = k[x,y] / (x-a) \oplus k[x,y] / (x-b) = k \oplus k$. 
+  This follows from the fact that $(x-a)$ and $(x-b)$ are coprime, and thus the Chinese Remainder Theorem applies.
+
+\end{proof}
+
+\section*{Exercise 15}
+
+Prove that if $X = \cup U_\alpha$ is an open covering of a closed set $X$, by open set $U_\alpha$,
+then there exists a finite subcovering such that $X = \cup_{i=1}^{n} U_{\alpha_i}$.
+
+\begin{proof}
+
+  Since $X$ is closed, it is the solution to a finite set of polynomials. Hence, it has a
+  corresponding ideal $\mathfrak{U}_X \subseteq k[T]$, that is finitely generated and is the
+  intersection of a finite number of maximal ideals. These have corresponding closed sets $V_i$ that
+  we can take the complement of to get open sets $U_i$. We can then write $X \subseteq U_i$. Not
+  sure how to finish this proof. Can take the complement of the $V_i$, but there's no guarantee that
+  those complements are any of the $U_\alpha$. 
+
+\end{proof}
+
+
+\section*{Exercise 16}
+
+Prove that the Frobenius map is an injective map. Is it an isomorphism when $ X = \mathbb{A}^1$?
 
 
 \end{document}
