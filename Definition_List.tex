@@ -20,9 +20,28 @@ processing. This will probably get long, so maybe we can chunk it later. I'm not
 start all the way with the definition of a topological space. But I think I can start with the ideas
 of homology and cohomology. 
 
+Update (4/3/24): We definitely need to backtrack. We're going to introduce the necessary machinery
+from topology and then we will define the simplices and go from there.
+
 \section{Definitions}
 
-\subsection{Simplicial Homology}
+\subsection{Topology Preliminaries}
+
+Given a set $X$, a \textit{topology} on $X$ is a set $\mathcal{T} \subset \mathcal{P}(X)$ of subsets
+of $X$. The elements of a topology are called \textit{open sets}. To be a topology, certain
+requirements must be satisfied. Namely :
+
+\begin{itemize}
+
+  \item $\phi, X \in \mathcal{T}$
+
+  \item For any collection of open sets $\{U_\alpha \}_{\alpha \in I}$, $\bigcup_{\alpha \in I} U_\alpha$
+
+  \item For any finite collection of open sets $\{U_\alpha\}_{\alpha \leq n}$,$\bigcap_{\alpha} U_\alpha$
+    
+\end{itemize}
+
+\subsection{Simplicial Complexes}
 
 The central objects of simplicial homology are simplicial complexes.
 
@@ -41,12 +60,14 @@ another simplex.
 
 \end{itemize}
 
+\subsection{Simplicial Homology}
+
 In order to do algebra with simplicial complexes, we need to associate it to algebraic objects that
 we can manipulate. This is where the chain complex comes in.
 
 \begin{itemize}
 
-  \item Say $X$ is a $k$-dimensional simplicial complex. The \textbf{chain group} $C_k(X,
+  \item Say $X$ is a $k$-dimensional simplicial complex. The \textit{chain group} $C_k(X,
     \mathbb{R})$ is the vector space (over $\mathbb{R}$) with basis given by the number of
     $k$-simplices in $X$. 
 
@@ -59,6 +80,24 @@ we can manipulate. This is where the chain complex comes in.
 \caption{A simplicial complex, with 6 vertices and 7 edges.}
 \end{figure}
 
-Inspecting the image, we see that we have two 
+Inspecting the image, we see that we have 6 vertices and 7 edges. No higher dimensional simplices. 
+We can write down the chain groups associated with this complex: $C_1(X, \mathbb{R}) = \mathbb{R}^6 , C_2(X, \mathbb{R}) = \mathbb{R}^7$
+
+
+Note that $C_k(X, \mathbb{R}) = 0, k > 2$. For our purposes, we will use $\mathbb{R}$ for our base field for the 
+associated vector space and will suppress writing down the associated field for the chain group. Writing 
+$C_k(X)$ instead for brevity.
+
+Between chain groups, there exists a map $\delta_{k}: C_k(X) \to C_{k-1}(X)$ given by
+\begin{equation}
+  \delta_k (v_{i_1}, \ldots v_{i_k}) =  \sum_{j = 0}^{k} (-1)^j (v_{i_1}, \ldots, \hat{v_{i_j}} , \ldots, v_{i_k})
+\end{equation}
+
+This is called the \textit{kth chain map}. A set pair of chain groups and chain maps form a \textit{chain complex}.
+The associated chain maps have the property that $\delta_{k-1} \circ \delta_{k} = 0$. These chain maps decompose 
+into their associated kernel and image maps.
+
+Given a chain complex $C(X)$, we define the \textit{kth homology group} to be $H_k(C) = ker(\delta_k) / Im(\delta_{k+1})$
+
 
 \end{document}
