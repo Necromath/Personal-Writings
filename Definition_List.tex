@@ -95,23 +95,74 @@ This is called the \textit{kth chain map}. A set pair of chain groups and chain 
 The associated chain maps have the property that $\delta_{k-1} \circ \delta_{k} = 0$. These chain maps decompose 
 into their associated kernel and image maps.
 
-Given a chain complex $C(X)$, we define the \textit{kth homology group} to be $H_k(C) = ker(\delta_k) / Im(\delta_{k+1})$
+Given a chain complex $C(X)$, we define the \textit{kth homology group} to be 
 
-[INSERT PICTURE OF HIGHLIGHTED ELEMENTS OF THE BOUNDARY MAP HERE]
+\begin{equation}
+H_k(C) = ker(\delta_k) / Im(\delta_{k+1})
+\end{equation}
 
+Below, we have the result of the boundary map acting on the chain group defined by 
+our edges. With blue indicating a positive value of the basis element of our chain 
+group and red indicating a negative. We are interested in sums of chains whose boundary
+maps equal to zero. These would correspond to "holes" in the picture of our simplicial complex.
+
+
+\begin{figure}[ht]
+  \begin{center}
+      \includegraphics[scale = .4]{Colored_Cx.jpg}
+  \end{center}
+\caption{The boundary map of the edges of the simplicial complex}
+\end{figure}
+
+Let's perform a calculation, following our formula (and our picture), we see that
+
+\begin{align*}
+\partial(e_1) = v_2 - v_1 \\
+\partial(e_2) = v_3 - v_2 \\
+\partial(e_3) = v_3 - v_1
+\end{align*}
+
+Since the map $\partial$ is linear (it is a map between vector spaces), we can write
+down 
+\begin{equation*}
+\partial(e_1 + e_2 - e_3) = \partial(e_1) + \partial(e_2) - \partial(e_3) = 0
+\end{equation*}
+
+This means that the element $(e_1 + e_2 - e_3) \in C_1(X)$ is actually inside $ker(\partial_1)$ !
+Meaning that in the definition of homology, this is a nontrivial element! From our picture, we also
+see that $(e_5 + e_7 - e_6) \in ker(\partial_1)$. This gives 2 nontrivial elements in the kernel of $\partial_1$.
+
+It is important to note that in the image, there is no higher dimensional 2-simplex that these 1-simplices are the
+boundary of, meaning that $Im(\partial_2) = 0$. Writing this all down, we mean to say:
+
+\begin{equation*}
+  H_1(X) = \mathbb{R}^2
+\end{equation*}
 
 
 \subsection{Simplicial Cohomology}
 
+Fill me
+
 \subsection{Persistent Homology}
+
+Fill me
 
 \subsection{Hodge Laplacian}
 
+Fill me 
+
 \subsection{Sheaves}
+
+Fill me 
 
 \subsection{Sheaf graph networks}
 
+Fill me 
+
 \subsection{Sheaf Cohomology}
+
+Fill me
 
 \subsection{Further Directions and Questions}
 
@@ -133,6 +184,9 @@ Given a chain complex $C(X)$, we define the \textit{kth homology group} to be $H
   \item Homology of dynamical systems
 
   \item Given a coboundary map $\delta$, we can construct a laplacian matrix associated with a sheaf.
+
+  \item Chemical Reaction networks have a hypergraph structure. Is there a way to write down a sheaf and associated
+    laplacian matrix with this hypergraph?
 
 \end{itemize}
 
