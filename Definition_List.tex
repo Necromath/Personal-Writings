@@ -28,9 +28,9 @@ start all the way with the definition of a topological space. But I think I can 
 of homology and cohomology. 
 
 
-\section{Definitions}
+\section{Definitions and Preliminaries}
 
-\subsection{Topology Preliminaries}
+\subsection{Topological Preliminaries}
 
 \begin{definition}[Topology] Given a set $X$, a \textit{topology} on $X$ is a set $\mathcal{T} \subset \mathcal{P}(X)$ of subsets
 of $X$. The elements of a topology are called \textit{open sets}. To be a topology, certain
@@ -185,15 +185,21 @@ Finally, a rapid fire interpretation / intuition of homology groups:
 
 \subsection{Simplicial Cohomology}
 
-Fill me
+As with anything, there is always a dual. Cohomology is the dual to homology in that all the maps go backwards.
+This is otherwise known as a contravariant functor. Similarly, the chain groups are not the same. We now have 
+cochain groups, which can really be thought of as the dual vector space to our original chain group. We map real numbers
+to the k-simplices now. Let's set up all the definitions as in simplicial homology and compare :
+
+[NEED COHOMOLOGY DEFINITIONS]
+
+\subsection{hodge laplacian}
+
+Fill me 
 
 \subsection{Persistent Homology}
 
 Fill me
 
-\subsection{Hodge Laplacian}
-
-Fill me 
 
 \subsection{Sheaves}
 
@@ -207,7 +213,7 @@ Fill me
 
 Fill me
 
-\subsection{Further Directions and Questions}
+\section{Further Directions and Questions}
 
 \begin{itemize}
   \item Is there a theory about probability sheaves? Could one be written down such that
@@ -219,7 +225,7 @@ Fill me
 
   \item What is some nice data that TSP can be used on?
 
-  \item The current methods from TDA and TSP are: Persistent Homology, Bottleneck/Wasserstein distance, 
+  \item The current methods from TDA are: Persistent Homology, Bottleneck/Wasserstein distance, 
     0 dimensional sublevel set persistence, 
 
   \item Homology for lattice configurations?
@@ -230,6 +236,8 @@ Fill me
 
   \item Chemical Reaction networks have a hypergraph structure. Is there a way to write down a sheaf and associated
     laplacian matrix with this hypergraph?
+
+  \item Topological Entropy of a topological dynamical system? Can we interpret the CRN above as one? See Pierre Baudot
 
 \end{itemize}
 
