@@ -5,7 +5,14 @@
 \documentclass[12pt]{article}
 \author{Mauricio Montes}
 
-\usepackage{amsmath, graphicx, amssymb}
+\usepackage{amsmath, graphicx, amssymb, amsthm}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{exmp}[thm]{Example}
 
 \title{TDA Introduction and some other concepts}
 
@@ -25,7 +32,7 @@ of homology and cohomology.
 
 \subsection{Topology Preliminaries}
 
-Given a set $X$, a \textit{topology} on $X$ is a set $\mathcal{T} \subset \mathcal{P}(X)$ of subsets
+\begin{definition}[Topology] Given a set $X$, a \textit{topology} on $X$ is a set $\mathcal{T} \subset \mathcal{P}(X)$ of subsets
 of $X$. The elements of a topology are called \textit{open sets}. To be a topology, certain
 requirements must be satisfied. Namely :
 
@@ -39,37 +46,42 @@ requirements must be satisfied. Namely :
     
 \end{itemize}
 
+\end{definition}
+
 \subsection{Simplicial Complexes}
 
-The central objects of simplicial homology are simplicial complexes.
+The central objects of simplicial homology are simplicial complexes. The purpose of all of this is so that we can associate a
+topological space with a chain complex, and then we can do algebra with the chain complex to extract topological information about the space.
 
-\begin{itemize}
 
-\item A k\textbf{-simplex} is the convex hull of a set of $k+1$ points in some Euclidean space. We can think of a 0-simplex as a
+\begin{definition}[Simplices and Simplicial Complexes]
+
+A k\textit{-simplex} is the convex hull of a set of $k+1$ points in some Euclidean space. We can think of a 0-simplex as a
   vertex. A 1-simplex is an edge, a 2-simplex is a triangle, and so on. 
 
-\item Note that a k-simplex has $k+1$ faces, which are the simplices of dimension $k-1$ that are
+  Note that \begin{itemize}
+    \item a k-simplex has $k+1$ faces, which are the simplices of dimension $k-1$ that are
   contained in it.
 
-\item A \textbf{simplicial complex} is a collection of simplices such that the intersection of any two simplices is either empty or
+    \item A \textit{simplicial complex} is a collection of simplices such that the intersection of any two simplices is either empty or
 another simplex.
 
-\item The \textbf{dimension} of a simplicial complex is the maximum dimension of any of the simplices in the complex. 
+    \item The \textit{dimension} of a simplicial complex is the maximum dimension of any of the simplices in the complex. 
 
-\end{itemize}
+      \end{itemize}
+
+\end{definition}
 
 \subsection{Simplicial Homology}
 
 In order to do algebra with simplicial complexes, we need to associate it to algebraic objects that
 we can manipulate. This is where the chain complex comes in.
 
-\begin{itemize}
+\begin{definition}[Chain Group]  Say $X$ is a $k$-dimensional simplicial complex. The \textit{chain group} $C_k(X,\mathbb{R})$
+is the vector space (over $\mathbb{R}$) with basis elements given by the number of $k$-simplices in $X$.
+\end{definition}
 
-  \item Say $X$ is a $k$-dimensional simplicial complex. The \textit{chain group} $C_k(X,
-    \mathbb{R})$ is the vector space (over $\mathbb{R}$) with basis given by the number of
-    $k$-simplices in $X$. 
-
-\end{itemize}
+Below is an example that we will use to illustrate the concept of a chain group.
 
 \begin{figure}[ht]
   \begin{center}
@@ -78,7 +90,7 @@ we can manipulate. This is where the chain complex comes in.
 \caption{A simplicial complex, with 6 vertices and 7 edges.}
 \end{figure}
 
-Inspecting the image, we see that we have 6 vertices and 7 edges. No higher dimensional simplices. 
+Inspecting the image, we see that we have 6 vertices and 7 edges and no higher dimensional simplices. 
 We can write down the chain groups associated with this complex: $C_1(X, \mathbb{R}) = \mathbb{R}^6 , C_2(X, \mathbb{R}) = \mathbb{R}^7$
 
 
@@ -86,20 +98,30 @@ Note that $C_k(X, \mathbb{R}) = 0, k > 2$. For our purposes, we will use $\mathb
 associated vector space and will suppress writing down the associated field for the chain group. Writing 
 $C_k(X)$ instead for brevity.
 
-Between chain groups, there exists a map $\delta_{k}: C_k(X) \to C_{k-1}(X)$ given by
+\begin{definition}[Chain Maps and Chain Complexes]Between chain groups, there exists a map $\delta_{k}: C_k(X) \to C_{k-1}(X)$ given by
 \begin{equation}
   \delta_k (v_{i_1}, \ldots v_{i_k}) =  \sum_{j = 0}^{k} (-1)^j (v_{i_1}, \ldots, \hat{v_{i_j}} , \ldots, v_{i_k})
 \end{equation}
 
 This is called the \textit{kth chain map}. A set pair of chain groups and chain maps form a \textit{chain complex}.
-The associated chain maps have the property that $\delta_{k-1} \circ \delta_{k} = 0$. These chain maps decompose 
-into their associated kernel and image maps.
+The associated chain maps have the property that $\delta_{k-1} \circ \delta_{k} = 0$. 
+
+\end{definition}
+
+As with any map between vector spaces, it is always an object of interest to find the kernel and image of the map. What we do instead
+is a bit different. We compare the kernel of the map to the image of the previous map. This is the idea behind the homology groups.
+
+\begin{definition}[Homology Groups]
 
 Given a chain complex $C(X)$, we define the \textit{kth homology group} to be 
 
 \begin{equation}
 H_k(C) = ker(\delta_k) / Im(\delta_{k+1})
 \end{equation}
+
+\end{definition}
+
+\subsubsection{A helpful example}
 
 Below, we have the result of the boundary map acting on the chain group defined by 
 our edges. With blue indicating a positive value of the basis element of our chain 
@@ -138,6 +160,27 @@ boundary of, meaning that $Im(\partial_2) = 0$. Writing this all down, we mean t
 \begin{equation*}
   H_1(X) = \mathbb{R}^2
 \end{equation*}
+
+We can augment this example by adding a 2-simplex to our simplicial complex. One that would fill in one of the holes
+in the complex. Then the homology group would be $H_1(X) = \mathbb{R}^1$. If we attached a 3-simplex to the complex, 
+then $H_1(X) = \mathbb{R}^1$. But then $H_2(X) = \mathbb{R}^1$ as well! This is due to the creation of a "void" in the
+tetrahedron that we attached.  This is the essence of simplicial homology.
+
+Finally, some interpretations / intuition of homology groups:
+
+\begin{itemize}
+
+\item $H_k(X) = 0$ for $k > dim(X)$
+
+\item $H_0(X)$ is the number of connected components of $X$
+
+\item $H_1(X)$ is the number of "holes" in $X$
+
+\item $H_2(X)$ is the number of "voids" in $X$
+
+\item If $X, Y$ are simplicial complexes, and $f: X \to Y$ is a simplicial map, then $f$ induces a map $f_*: H_k(X) \to H_k(Y)$
+
+\end{itemize}
 
 
 \subsection{Simplicial Cohomology}
