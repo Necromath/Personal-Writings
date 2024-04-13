@@ -78,7 +78,11 @@ In order to do algebra with simplicial complexes, we need to associate it to alg
 we can manipulate. This is where the chain complex comes in.
 
 \begin{definition}[Chain Group]  Say $X$ is a $k$-dimensional simplicial complex. The \textit{chain group} $C_k(X,\mathbb{R})$
-is the vector space (over $\mathbb{R}$) with basis elements given by the number of $k$-simplices in $X$.
+is the vector space (over $\mathbb{R}$) with basis elements given by the number of $k$-simplices in $X$. Written as 
+\begin{equation*}
+  C_k(X, \mathbb{R}) = \left \{ \sum_{\sigma \in X_k} a_\sigma \sigma | a_\sigma \in \mathbb{R} \right \}
+\end{equation*}
+Where $X_k$ is the set of all $k$-simplices in $X$.
 \end{definition}
 
 Below is an example that we will use to illustrate the concept of a chain group.
@@ -185,12 +189,21 @@ Finally, a rapid fire interpretation / intuition of homology groups:
 
 \subsection{Simplicial Cohomology}
 
-As with anything, there is always a dual. Cohomology is the dual to homology in that all the maps go backwards.
-This is otherwise known as a contravariant functor. Similarly, the chain groups are not the same. We now have 
-cochain groups, which can really be thought of as the dual vector space to our original chain group. We map real numbers
-to the k-simplices now. Let's set up all the definitions as in simplicial homology and compare :
+We can also define a cohomology theory for simplicial complexes. This is done by defining the dual of the chain groups
 
-[NEED COHOMOLOGY DEFINITIONS]
+\begin{definition}[Cochain Groups] 
+  The $k$th cochain group is defined as $C^k(X) = Hom(C_k(X), \mathbb{R})$. Its elements, $\eta$, are the $k$th cochain maps 
+  defined as $\mathbb{R}$-linear maps $\eta: C^k(X) \to \mathbb{R}$. 
+\end{definition}
+
+\begin{definition}[Coboundary Maps]
+  The boundary map for cochains is defined as the dual of the chain map. That is, for $\eta \in C^k(X), \sigma \in C_{k+1}(X)$, 
+  we define the boundary map
+  $\delta^k: C^k(X) \to C^{k+1}(X)$ as 
+  \begin{equation*}
+    \delta^k(\eta)(\sigma) = \eta(\partial_{k+1}(\sigma))
+  \end{equation*}
+\end{definition}
 
 \subsection{hodge laplacian}
 

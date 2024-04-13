@@ -46,11 +46,21 @@ This map is also relatively nice, $s(e_i)$ and $t(e_i)$ are linearly independent
 so the quotient map will always yield us a vector space.
 
 
+
+\section{My Thoughts}
 Nobody seems to talk about the global sections of these sheaves for hypergraphs? 
 From the definition, the global sections of the hypergraph will need to be defined.
 It seems like the global sections of the hypergraph will be a choice of $x_v \in \F(v)$ for
 all $v \in V$, such that $\F_{v \trianglelefteq e}(x_v) = \F_{u \trianglelefteq e}(x_u)$ for all
 $e \in E$ such that $e = v - u$.
+
+In \cite{jakobhansen}, the author mentions that if a graph $G$ is connected with at least one cycle
+and all the stalks have the same dimension, then almost any choice of restrictions will yield a sheaf 
+with no global sections. This is bad news for us if we want to use sheaf cohomology for these chemical
+reaction networks. This is because sheaf cohomology is concerned with the global sections of a sheaf.
+
+However, in \cite{flowsheaf} the authors do mention that that sheaves can encode linear transformations
+at nodes, which would accommodate reaction balancing! This all seems great and promising.
 
 Need to make use of the hypergraph laplacian. In \cite{jost2018hypergraph}, the authors define
 a hypergraph laplacian for the vertices and the hyperedges of a hypergraph.
@@ -63,9 +73,8 @@ Also interesting: the author of \cite{MorphismsReaction} define a reactant morph
 stoichiomorphism. This is all to say that if there exists a reactant morphism and a stochiomorphism
 from one chemical reaction network to another, then there is an \textit{emulation} between the two
 chemical reaction networks. This actually relates the differential systems of two chemical reaction
-networks. 
+networks. This is a bit too much at this point.
 
-So, my personal hypothesis is then that Emulation is a morphism of sheaves.
 
 \bibliographystyle{plain}
 \bibliography{Cell_Sheaf_Bib}
