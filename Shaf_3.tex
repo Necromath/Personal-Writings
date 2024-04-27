@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\title{Algebraic Geometry HW 4}
+\author{Mauricio Montes}
+
+\begin{document}
+
+\maketitle
+
+\section*{Exercise 1 Section 3 }
+
+Solution: Given the closed set $X \subset \mathbb{A}^3$ defined by the equations
+$f: x^2 - y^2 - z^2 + 1= 0$ and $g: x^2 + y^2 + z^2 = 0$. We wish to decompose $X$ into irreducible components.
+
+The equations decompose in the following way: Note that moving $z$ to the other side in $f$ allows us to rewrite $g$ as
+$2x^2 + 1 = 0$. Meaning that $x = \pm \frac{i}{\sqrt{2}}$. Replacing this relation in $g$, we get that $y^2 + z^2 = \frac{1}{2}$.
+
+This means that $X$ is the union of the sets $X_1 = \{x = \pm \frac{i}{\sqrt{2}} \}, X_2 = \{y^2 + z^2 = \frac{1}{2}\}$
+
+
+
+\section*{Exercise 4 Section 3}
+
+
+Solution: We wish to decompose $X$ given by $y^2 = xz, z^2 = y^3$ into irreducible components. Substituting in 
+the first equation in the second, we get that $z^2 = (xz)y$. Meaning $z = xy$. Plugging this back into our first
+equation. We see that $y^2 = xz = x(xy) = x^2y$. Meaning $y = 0$ or $y = x^2$. Which then implies that $x^6 = z^2$ and 
+$z = x^3$ or $z = -x^3$. This means that $X$ is the union of the sets 
+$X_1 = \{y = 0\}, X_2 = \{y = x^2, z = x^3\}, X_3 = \{y = x^2, z = -x^3\}$. These irreducible components all come from clear
+birational maps of $\mathbb{A}^1$ and so are all isomorphic to $\mathbb{A}^1$.
+
+\section*{Exercise 3 Section 4}
+
+Solution: As per the hint, studying the inclusion of $X$ in the affine variety $Y = \mathbb{A}^2$.
+We have an induced isomorphism on the coordinate rings $\phi: k[Y]= k[x,y] \rightarrow k[X]$. To see why this is an isomorphism,
+consider $f = \frac{g}{h} \in k[X]$. The condition of $f$ being regular is that $h$ does not vanish on $X$. However, if $h$ is not
+a unit in $k[X]$, then there are infinitely many solutions to $h = 0$ in $X$. So then $h$ must be a unit if $f \in k[X]$.
+But then this means that $f \in k[x,y] = k[Y]$. So thus $\phi$ is an isomorphism. However! The inclusion map is not an isomorphism.
+Thus, $\mathbb{A}^2 - \mathbf{0}$ is not an affine variety.
+
+\section*{Exercise 4 Section 4}
+
+Solution: 
+
