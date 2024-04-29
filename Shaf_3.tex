@@ -18,7 +18,7 @@ $2x^2 + 1 = 0$. Meaning that $x = \pm \frac{i}{\sqrt{2}}$. Replacing this relati
 
 This means that $X$ is the union of the sets $X_1 = \{x = \pm \frac{i}{\sqrt{2}} \}, X_2 = \{y^2 + z^2 = \frac{1}{2}\}$
 
-
+(I don't think so really. Union is supposed to be a product of these polynomials, so I need another formulation)
 
 \section*{Exercise 4 Section 3}
 
@@ -42,4 +42,16 @@ Thus, $\mathbb{A}^2 - \mathbf{0}$ is not an affine variety.
 \section*{Exercise 4 Section 4}
 
 Solution: 
+
+
+\section{Exercise 6 Section 4}
+
+Solution: Supposing there was such a map $\phi$, then we would have an induced homomorphism 
+$\phi^*: k[\mathbb{A}^n] \rightarrow k[\mathbb{P}^1]$.
+However, the coordinate ring of the left hand side is $k[x_1, \ldots, x_n]$. But the right hand side is just $k$. This homomorphism
+is a surjection, so it is achieved by sending sending variables to constants, i.e. quotienting out by $(x_i - c_i)$ for some
+$c_i \in k$. Ideal variety correspondence then tells us that the map $\phi$ is then given by $C = (c_1, \ldots, c_n)$.
+
+
+\end{document}
 
