@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+
+\title{Algebraic Geometry HW 5}
+
+\author{Mauricio Montes}
+
+\begin{document}
+
+\maketitle
+
+\section{Exercise 4.1}
+
+Solution: $(\Rightarrow)$  Suppose we have an affine, irreducible variety that is of the form $U = V(I(f_1, \ldots, f_m))$. 
+Homogenizing these polynomials wrt $x_i$ for each $i$ we get 
+\begin{equation*}
+\{ F_1, \ldots, \hat{F_i}, \ldots, F_m \}
+\end{equation*}
+where $\hat{F_i}$ means that $F_i$ is omitted.  We can then write $U_i = V(I(F_1, \ldots, F_m))$ which is a closed projective set corresponding
+to $U$. Their (finite) union forms the projective variety $V(I(F_1, \ldots, F_m))$ which is the projective closure of $U$.
+If this was not irreducible, then there would be 2 nonempty closed sets that are disjoint and whose union is $\bar{U}$. These
+would in turn correspond to 2 nonempty closed sets in $U$ that are disjoint and whose union is $U$ by the ideal variety correspondence.
+This is a contradiction of the irreducibility of $U$
+
+$(\Leftarrow)$ Suppose we have an irreducible projective closure $\bar{U}$ of a variety. Being irreducible means that the ideal corresponding to
+the variety is prime. The ideal variety correspondence then applies when we restrict to the affine part of the projective variety. This means that on 
+each of the affine charts, the variety is irreducible. As per equation (1.29) from the book, we see that $U$ is recovered by intersecting the projective
+closure with the affine charts. This means that $U$ is irreducible.
+
+\section{Exercise 4.2}
+
+Solution: This association is the one given by $U \mapsto \bar{U}$ and $\bar{U} \mapsto U \cap \mathbb{A}^n _0$. When $U$ is affine, this corresponds to the
+definition associated in the book. This follows almost exactly from the book? See page 46. "The homogenous equations of $\bar{U}$ are of the form
+\begin{equation*}
+  S^k _0 F(S_1 / S_0, \ldots, S_n / S_0)
+\end{equation*}"
+The injection from $U$ to $\bar{U}$ yields a correspondence for any affine subvariety to the ideal of the associated projective subvariety. Ideal-variety correspondence
+then gives us the desired result. 
+
+\section{Exercise 4.5}
+
+Solution: 
+
+
+\end{document}
