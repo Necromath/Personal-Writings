@@ -24,6 +24,17 @@ is to develop the concept of a sheaf of a chemical reaction network. Then, show 
 sheaf associated to a chemical reaction network can be used to study the dynamics of the
 chemical reaction network.
 
+\section{Definitions}
+
+\subsection{Topology}
+
+\subsection{Simplicial Complexes}
+
+\subsection{Simplicial Homology}
+
+\subsection{Simplicial Cohomology}
+
+\subsection{Chemical Reaction Network}
 
 
 \section{Sheaf of a Chemical Reaction Network}
@@ -44,7 +55,7 @@ network is the cellular sheaf $ \< \F(v) , \F(e), \F_{v \trianglelefteq e} \>$ w
 \end{itemize}
 \end{definition}
 
-\section{Sheaf Cohomology}
+\section{Sheaf Cohomology of CRN}
 
 We develop a theory of sheaf cohomology for these chemical reaction networks. 
 \begin{definition}
@@ -54,15 +65,28 @@ We develop a theory of sheaf cohomology for these chemical reaction networks.
   \end{equation*}
 \end{definition}
 
+Consider the following directed graph:
+\[\begin{tikzcd}
+	&& \bullet \\
+	{} & \bullet & \bullet & \bullet & {}
+	\arrow[from=1-3, to=2-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=1-3]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+This has a corresponding sheaf:
+
 \newpage
 \[\begin{tikzcd}
-	&& {\mathbb{R}[x_1,x_2,x_3,x_4] / (-x_3)} \\
-	&& {\mathbb{R}[x_1,x_2,x_3,x_4]} \\
-	& {\mathbb{R}[x_1,x_2,x_3,x_4] / (x_4 -x_3)} & {\mathbb{R}[x_1,x_2,x_3,x_4]/(x_3-x_2)} \\
-	{\mathbb{R}[x_1,x_2,x_3,x_4]} && {\mathbb{R}[x_1,x_2,x_3,x_4]} \\
-	& {\mathbb{R}[x_1,x_2,x_3,x_4] /(x_1 - x_4)} & {\mathbb{R}[x_1,x_2,x_3,x_4] / (x_2 - x_1)} \\
-	&& {\mathbb{R}[x_1,x_2,x_3,x_4]} \\
-	&& {\mathbb{R}[x_1,x_2,x_3,x_4] / (x_1)}
+	&& \textcolor{rgb,255:red,92;green,92;blue,214}{\mathbb{R}[x_1,x_2,x_3,x_4] / (-x_3)} \\
+	&& \textcolor{rgb,255:red,214;green,92;blue,92}{\mathbb{R}[x_1,x_2,x_3,x_4]} \\
+	& \textcolor{rgb,255:red,92;green,92;blue,214}{\mathbb{R}[x_1,x_2,x_3,x_4] / (x_4 -x_3)} & \textcolor{rgb,255:red,92;green,92;blue,214}{\mathbb{R}[x_1,x_2,x_3,x_4]/(x_3-x_2)} \\
+	\textcolor{rgb,255:red,214;green,92;blue,92}{\mathbb{R}[x_1,x_2,x_3,x_4]} && \textcolor{rgb,255:red,214;green,92;blue,92}{\mathbb{R}[x_1,x_2,x_3,x_4]} \\
+	& \textcolor{rgb,255:red,92;green,92;blue,214}{\mathbb{R}[x_1,x_2,x_3,x_4] /(x_1 - x_4)} & \textcolor{rgb,255:red,92;green,92;blue,214}{\mathbb{R}[x_1,x_2,x_3,x_4] / (x_2 - x_1)} \\
+	&& \textcolor{rgb,255:red,214;green,92;blue,92}{\mathbb{R}[x_1,x_2,x_3,x_4]} \\
+	&& \textcolor{rgb,255:red,92;green,92;blue,214}{\mathbb{R}[x_1,x_2,x_3,x_4] / (x_1)}
 	\arrow[from=2-3, to=1-3]
 	\arrow[from=2-3, to=3-2]
 	\arrow[from=2-3, to=3-3]
@@ -74,7 +98,6 @@ We develop a theory of sheaf cohomology for these chemical reaction networks.
 	\arrow[from=6-3, to=5-3]
 	\arrow[from=6-3, to=7-3]
 \end{tikzcd}\]
-
 
 \begin{comment}% {{{
 \section{My Thoughts}
