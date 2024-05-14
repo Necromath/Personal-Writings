@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+  $\F(e) = \mathbb{R}^{|V|}[x_1, \ldots, x_{|E|}] / (t(e_i) - s(e_i))$, where $s(e_i)$ is the polynomial associated to  and $\F_{v \trianglelefteq e}$ is the
+=======
 \documentclass[12pt]{article}
 \author{Mauricio Montes}
 \usepackage{amsmath,amssymb,amsthm, verbatim, tikz-cd, graphicx}
@@ -113,3 +116,4 @@ networks. This is a bit too much at this point.
 \end{document}
 
 
+>>>>>>> the-good-branch
