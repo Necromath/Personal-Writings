@@ -24,7 +24,7 @@ is to develop the concept of a sheaf of a chemical reaction network. Then, show 
 sheaf associated to a chemical reaction network can be used to study the dynamics of the
 chemical reaction network.
 
-\begin{comment}
+\begin{comment}% {{{
 
 \section{Definitions}
 
@@ -38,13 +38,23 @@ chemical reaction network.
 
 \subsection{Chemical Reaction Network}
 
-\end{comment}
+\end{comment}% }}}
 
-\section{Sheaf of a Chemical Reaction Network}
+\section{Goals for this paper and questions to be answered}
+\begin{itemize}
+  \item Define a chemical reaction sheaf
+  \item How can this improve a problem?
+  \item What needs to be done?
+  \item Why is this useful?
+  \item What are the implications of this?
+\end{itemize}
 
+\section{Chemical Reaction Network}
 A chemical reaction network is defined as a quadruple, $\Gamma = (V, E, s, t)$, where $V$ is a set of
 species (vertices), $E$ is a set of reactions (edges), $s: E \to V$ is the source map, and
-$t: E \to V$ is the target map. The sheaf of a chemical reaction network is defined as follows.
+$t: E \to V$ is the target map.
+\section{Sheaf of a Chemical Reaction Network}
+The sheaf of a chemical reaction network is defined as follows.
 
 \begin{definition} Given a chemical reaction network $\Gamma$, the \textit{chemical reaction sheaf} associated to a 
 network is the cellular sheaf $ \< \F(v) , \F(e), \F_{v \trianglelefteq e} \>$ where
@@ -101,6 +111,8 @@ This has a corresponding sheaf:
 	\arrow[from=6-3, to=5-3]
 	\arrow[from=6-3, to=7-3]
 \end{tikzcd}\]
+
+One possible reduction of this graph would be collapsing the cells on the left down to one. 
 
 \begin{comment}% {{{
 \section{My Thoughts}
