@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \author{Mauricio Montes}
-\usepackage{amsmath,amssymb,amsthm, verbatim, tikz-cd, graphicx}
+\usepackage{amsmath,amssymb,amsthm, verbatim, tikz-cd, graphicx, quiver}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
 \newcommand{\F}{\mathcal{F}}
@@ -80,8 +80,8 @@ We develop a theory of sheaf cohomology for these chemical reaction networks.
 
 Consider the following directed graph:
 \[\begin{tikzcd}
-	&& \bullet \\
-	{} & \bullet & \bullet & \bullet & {}
+	&& \bullet v_4 \\
+	{} & \bullet v_1 & \bullet v_2 & \bullet v_3 & {}
 	\arrow[from=1-3, to=2-2]
 	\arrow[from=2-1, to=2-2]
 	\arrow[from=2-2, to=2-3]
@@ -112,7 +112,41 @@ This has a corresponding sheaf:
 	\arrow[from=6-3, to=7-3]
 \end{tikzcd}\]
 
-One possible reduction of this graph would be collapsing the cells on the left down to one. 
+One possible reduction of this graph would be collapsing the cells on the left down to one vertex.
+
+The corresponding reduction will have a corresponding sheaf for the new CRN. Shown below:
+
+\[\begin{tikzcd}
+	& {\bullet v_4'} \\
+	{} & {\bullet v_3'} & {}
+	\arrow["{e_5}"', shift right=2, curve={height=6pt}, from=1-2, to=2-2]
+	\arrow["{e_1}"', from=2-1, to=2-2]
+	\arrow["{e_4}"', shift right=2, curve={height=6pt}, from=2-2, to=1-2]
+	\arrow["{e_6}"', from=2-2, to=2-3]
+\end{tikzcd}\]
+
+This will have (a priori) the corresponding CRS:
+
+\[\begin{tikzcd}
+	& {\mathbb{R}[x_3',x_4']} \\
+	{\mathbb{R}[x_3',x_4'] / (x_3' - x_4')} && {\mathbb{R}[x_3',x_4'] / (x_4' - x_3')} \\
+	{\mathbb{R}[x_3',x_4'] /(+x_3')} & {\mathbb{R}[x_3',x_4']} & {\mathbb{R}[x_3',x_4'] / (-x_3')}
+	\arrow[from=1-2, to=2-1]
+	\arrow[from=1-2, to=2-3]
+	\arrow[from=3-2, to=2-1]
+	\arrow[from=3-2, to=2-3]
+	\arrow[from=3-2, to=3-1]
+	\arrow[from=3-2, to=3-3]
+\end{tikzcd}\]
+
+However, when we consider the direct image sheaf given by the map 
+$\varphi: X \to X'$, $\varphi(v_1) = v_3', \varphi(v_2) = v_3', \varphi(v_3) = v_3', \varphi(e_2) = e_1 , \varphi(e_3) = e_1$ and
+the identity elsewhere. We get:
+
+
+
+
+
 
 \begin{comment}% {{{
 \section{My Thoughts}
