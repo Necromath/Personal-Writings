@@ -21,8 +21,8 @@ a sheaf of a chemical reaction network. This follows from the work of Hirono et 
 as a hypergraph. This offers a new perspective of viewing chemical reaction networks, as 
 \cite{duta2023sheaf} shows that hypergraphs admit a sheaf structure. The goal of this document
 is to develop the concept of a sheaf of a chemical reaction network. Then, show that the 
-sheaf associated to a chemical reaction network can be used to study the dynamics of the
-chemical reaction network.
+sheaf associated to a chemical reaction network recovers the original methods from the paper,
+avoiding the use of a Schur complement (can such a thing be formulated for sheaves?).
 
 \begin{comment}% {{{
 
@@ -144,7 +144,15 @@ $\varphi: X \to X'$, $\varphi(v_1) = v_3', \varphi(v_2) = v_3', \varphi(v_3) = v
 the identity elsewhere. We get: a small edit over yonder here
 
 
+\section{Some thoughts}
 
+It seems like the pushforward sheaf when doing the reduction yields the result we would be most
+interested in. This preserves the initial information we were working with when doing the reduction.
+At a sheaf level, this is just doing direct sums when collapsing edges / vertices. But, is there
+another way? Would choosing another space be viable and yield more interesting results vs using
+polynomial rings? The flow sheaf that is mentioned by Robinson seems to be interesting, but I don't
+think it quite suits my purposes. See my example. I'd like to have the power to use polynomial rings
+and the consequences they bring. 
 
 
 
